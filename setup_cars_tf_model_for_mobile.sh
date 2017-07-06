@@ -13,7 +13,7 @@ fi
 python -m tensorflow.python.tools.optimize_for_inference \
   --input=../cars/tf_files/output_graph.pb \
   --output=../cars/tf_files/output_graph_optimized.pb \
-  --input_names="Mul" \
+  --input_names="Cast" \
   --output_names="final_result"
 
 python tools/quantization/quantize_graph.py \
